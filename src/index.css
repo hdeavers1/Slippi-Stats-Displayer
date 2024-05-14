@@ -1,0 +1,156 @@
+body {
+  background-color: #222222;
+  color: #e9eaea;
+  margin: 0;
+  font-family: Maven Pro;
+  height: 700px;
+  overflow: hidden;
+}
+.player-container {
+  padding-top: 300px;
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0px; /* Adjust as needed */
+  transform: translateX(100%); /* Initial position off-screen to the right */
+  transition: transform .5s ease-in-out; /* Use transform property for the transition */
+}
+
+.playerStats {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Expand to cover the entire viewport height */
+  transform: translateX(-100%); /* Initial position off-screen to the left and up*/
+  transition: transform .5s ease-in-out; /* Use transform property for the transition */
+  font-size: 27px;
+  -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: black;
+}
+.directory-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  position: absolute;
+}
+.folderassets{
+  flex-direction: row;
+}
+#folderButton,
+#startButton {
+  margin-bottom: 10px; /* Add space below the buttons */
+}
+#startButton {
+  background-color: #208e2c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 27px;
+}
+#selectedFolderPath {
+  width: 300px; /* Adjust the width as needed */
+  margin-top: 10px; /* Optional: Add some space between the button and the text box */
+}
+
+.on-screen { 
+  transform: translateX(0%); /* Move to the left when the class is applied */
+  transition: transform .5s ease-in-out; /* Use transform property for the transition */
+}
+.up-screen{
+  transform: translateY(-100%);
+  transition: transform .5s ease-out;
+}
+.players {
+  text-align: center;
+  font-size: 27px;
+}
+#player1 {
+  padding-left: 35px;
+  order: 1; /* Set the order to 1 for Player 1 to appear on the left */
+}
+
+#player2 {
+  padding-right: 35px;
+  order: 2; /* Set the order to 2 for Player 2 to appear on the right */
+}
+
+#p1loses {
+  color: #ff4d00;
+}
+
+#p1wins {
+  color: #2ecc40;
+}
+#p2loses {
+  color: #ff4d00;
+}
+
+#p2wins {
+  color: #2ecc40;
+}
+
+#p1slash {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#p2slash {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#player1percentages {
+  font-size: 20px;
+}
+#player2percentages {
+  font-size: 20px;
+}
+#p1Stats,
+#p2Stats, 
+#statLabel {
+  width: 33%; /* Ensure each stats container takes half of the screen width */
+  z-index: 1;
+}
+#p1stats {
+  order: 1;
+}
+#p1stage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.2;
+}
+
+#p2Stats {
+  order: 2; /* Set the order to 3 for Player 2 stats to appear on the right */
+  margin-right: 20px;
+}
+#statLabel {
+  margin-top: 160px;
+  margin-left: 30px;
+}
+#p1num {
+  margin-left: 110px;
+}
+#p2num {
+  margin-left: 45px;
+}
+
+#player1name {
+  margin-left: 80px;
+  flex-direction: row;
+}
+
+#player2name {
+  margin-left: 20px;
+  flex-direction: row;
+}

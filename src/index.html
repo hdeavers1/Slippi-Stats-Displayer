@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slippi Ranked Display</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="directory-container">
+      <div class="folderassets">
+      <input type="text" id="selectedFolderPath" readonly><button id="folderButton">Select Folder</button>
+    </div>
+    <p>The folder path should contain all .slp files. If the directory is full of monthly subfolders, the program will not run.
+    </p>
+      <button id="startButton">Start</button> <br>
+    </div>
+    <div class="player-container">
+      <div class="players" id="player1">
+          <h3><span id="p1name"></span></h3>
+          <p><span id="p1tag"></span></p>
+          <div id="p1rank"></div>
+          <p><span id="p1rating"></span></p>
+          <p><span id="p1wins"></span><b><span id="p1slash"></span></b><span id="p1loses"></span></p>
+          <div class="character-container" id="player1characters"></div>
+          <div class="percentage-container" id="player1percentages"></div>
+      </div>
+
+      <div class="players" id="player2">
+          <h3><span id="p2name"></span></h3>
+          <p><span id="p2tag"></span></p>
+          <div id="p2rank"></div>
+          <p><span id="p2rating"></span></p>
+          <p><span id="p2wins"></span><b><span id="p2slash"></span></b><span id="p2loses"></span></p>
+          <div class="character-container" id="player2characters"></div>
+          <div class="percentage-container" id="player2percentages"></div>
+      </div>
+  </div>
+      
+    <div class="playerStats">
+      <div id="p1Stats">
+        <h3><span id="player1name"></span></h3>
+        <p><span id="p1color"></span></p>
+        <div id="p1num">
+        <p><span id ="p1dmg"></span></p>
+        <p><span id="p1input"></span></p>
+        <p><span id="p1open"></span></p>
+        <p><span id="p1neutral"></span></p>
+      </div>
+      </div>
+      <div id="p1stage"></div>
+      <div id="statLabel">
+      <p>Total Damage</p>
+      <p>Inputs/Minute</p>
+      <p>Openings/Kill</p>
+      <p>Neutral Win %</p>
+    </div>
+      <div id="p2Stats">
+        <h3><span id="player2name"></span></h3>
+        <p><span id="p2color"></span></p>
+        <div id="p2num">
+        <p><span id ="p2dmg"></span></p>
+        <p><span id="p2input"></span></p>
+        <p><span id="p2open"></span></p>
+        <p><span id="p2neutral"></span></p>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

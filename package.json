@@ -1,0 +1,37 @@
+{
+  "name": "slippi-stats-displayer",
+  "productName": "Slippi Stats Displayer",
+  "author": "LargePizzaSubNoHam",
+  "version": "1.0.0",
+  "description": "Stats Displayer For Ranked Slippi",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start src/index.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "@slippi/slippi-js": "^6.7.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "puppeteer": "^21.7.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "@electron-forge/publisher-gcs": "^7.4.0",
+    "electron": "28.0.0"
+  },
+  "build": {
+    "appId": "com.EldenLord.SlippiStatsDisplayer",
+    "files": "!build-assets${/*}"
+  }
+}
